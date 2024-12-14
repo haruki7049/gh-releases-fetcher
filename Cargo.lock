@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "gh-releases-fetcher"
+name = "gh-relfetch"
 version = "0.1.0"

@@ -44,7 +44,7 @@
           cargoArtifacts = craneLib.buildDepsOnly {
             inherit src;
           };
-          lfmt = craneLib.buildPackage {
+          gh-relfetch = craneLib.buildPackage {
             inherit src cargoArtifacts;
             strictDeps = true;
             doCheck = true;
@@ -64,7 +64,7 @@
 
           checks = {
             inherit
-              lfmt
+              gh-relfetch
               cargo-clippy
               cargo-doc
               ;
@@ -72,11 +72,11 @@
 
           packages = {
             inherit
-              lfmt
+              gh-relfetch
               cargo-clippy
               cargo-doc
               ;
-            default = lfmt;
+            default = gh-relfetch;
             doc = cargo-doc;
           };
 
